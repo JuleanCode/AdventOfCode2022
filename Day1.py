@@ -1,3 +1,5 @@
+#---Part 1---
+
 elfCalories = []
 
 with open('Input/Day1.txt') as f:
@@ -12,3 +14,13 @@ with open('Input/Day1.txt') as f:
             Calories += int(line)
     print('The elf with the most calories has:')
     print(max(elfCalories))
+
+#---Part 2---
+
+elfCalories.sort()
+highestCalories = 0
+
+for i in elfCalories[-3:]:
+    highestCalories += i
+
+print(highestCalories)
