@@ -2,16 +2,16 @@
 
 elfCalories = []
 
-with open('Input/Day1.txt') as f:
+with open('2022/Input/Day1.txt') as f:
     lines = f.readlines()
     
-    Calories = 0
+    calories = 0
     for line in lines:
         if line == "\n":
-            elfCalories.append(int(Calories))
-            Calories = 0
+            elfCalories.append(int(calories))
+            calories = 0
         else:
-            Calories += int(line)
+            calories += int(line)
     print('The elf with the most calories has:')
     print(max(elfCalories))
 
